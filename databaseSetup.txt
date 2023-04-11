@@ -1,0 +1,14 @@
+create table teams(
+id int NOT NULL AUTO_INCREMENT primary key,
+name varchar(100) NOT NULL,
+acronym varchar(100) NOT NULL,
+budget decimal(16,2) NOT NULL)
+;
+
+create table players(
+id int NOT NULL AUTO_INCREMENT primary key,
+name varchar(100) NOT NULL,
+position varchar(100) NOT NULL,
+team_id int,
+constraint fk_team_id foreign key (team_id) references teams(id))
+;

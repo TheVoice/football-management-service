@@ -161,24 +161,24 @@
 <h2>Players List</h2>
 <c:if test="${!empty players}">
 	<table class="tg">
-	<tr>
-		<th width="80">Player ID</th>
-		<th width="120">Player Name</th>
-		<th width="120">Position</th>
-		<th width="120">Team</th>
-		<th width="60">Edit</th>
-		<th width="60">Delete</th>
-	</tr>
-	<c:forEach items="${players}" var="player">
-		<tr>
-			<td>${player.id}</td>
-			<td>${player.name}</td>
-			<td>${player.position}</td>
-			<td>${player.team.name}</td>
-			<td><a href="<c:url value='/player/edit/${player.id}' />" >Edit</a></td>
-			<td><a href="<c:url value='/player/remove/${player.id}' />" >Delete</a></td>
-		</tr>
-	</c:forEach>
+        <tr>
+            <th width="80">Player ID</th>
+            <th width="120">Player Name</th>
+            <th width="120">Position</th>
+            <th width="120">Team</th>
+            <th width="60">Edit</th>
+            <th width="60">Delete</th>
+        </tr>
+        <c:forEach items="${players}" var="player">
+            <tr>
+                <td>${player.id}</td>
+                <td>${player.name}</td>
+                <td>${player.position}</td>
+                <td>${player.team.name}</td>
+                <td><a href="<c:url value='/player/edit/${player.id}' />" >Edit</a></td>
+                <td><a href="<c:url value='/player/remove/${player.id}' />" >Delete</a></td>
+            </tr>
+        </c:forEach>
 	</table>
 </c:if>
 
